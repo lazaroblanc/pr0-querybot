@@ -17,6 +17,7 @@
     "toad-scheduler": "^1.5.0"
   },
   "devDependencies": {
+    "eslint": "^7.32.0",
     "nodemon": "^2.0.13"
   }
 }
