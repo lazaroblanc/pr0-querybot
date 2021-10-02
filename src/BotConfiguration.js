@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const logger = require('./Logger');
 
-class ConfigHandler {
+class BotConfiguration {
 
     constructor() {
 
@@ -24,4 +24,4 @@ class ConfigHandler {
     }
 }
 
-module.exports = new ConfigHandler().config;
+module.exports = new BotConfiguration().config;

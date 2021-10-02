@@ -5,7 +5,7 @@ require("dotenv").config();
 const onExit = require("signal-exit");
 const logger = require("./Logger");
 const client = require("./Client");
-const config = require("./ConfigHandler");
+const config = require("./BotConfiguration");
 
 client.login(process.env.BOT_TOKEN);
 
