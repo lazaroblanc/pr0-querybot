@@ -1,0 +1,22 @@
+{
+  "name": "lordbot",
+  "version": "1.0.0",
+  "main": "./src/index.js",
+  "author": "Lázaro Blanc <lazaroblanc@users.noreply.github.com>",
+  "license": "",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ."
+  },
+  "dependencies": {
+    "axios": "^0.21.4",
+    "discord.js": "^13.1.0",
+    "dotenv": "^10.0.0",
+    "js-yaml": "^4.1.0",
+    "signal-exit": "^3.0.4",
+    "toad-scheduler": "^1.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  }
+}
