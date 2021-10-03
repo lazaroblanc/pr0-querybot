@@ -9,18 +9,18 @@ class BotConfiguration {
 
         logger.debug('Called constructor() on BotConfiguration');
 
-        this._configFileName = 'config.yaml';
-        this.config = {
-            rootDir: path.resolve(__dirname, '..'),
-            filePath: path.join(this._configFileName),
-        };
+        let configFileName = 'config.yaml';
+        let rootDir = path.resolve(__dirname, '..');
+        let configFilePath = path.join(rootDir, configFileName);
 
         try {
-            this.config = yaml.load(fs.readFileSync(`${this.config.filePath}`, 'utf8'));
+            this.config = yaml.load(fs.readFileSync(`${configFilePath}`, 'utf8'));
+            logger.verbose(`Loaded config from ${configFilePath}`);
         }
         catch (error) {
             logger.error(error);
         }
+
     }
 }
 
