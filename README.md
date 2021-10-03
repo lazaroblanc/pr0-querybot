@@ -1,4 +1,6 @@
 # pr0-querybot
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Flazaroblanc%2Fpr0-querybot.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Flazaroblanc%2Fpr0-querybot?ref=badge_shield)
+
 
 This readme is still work-in-progress
 
@@ -28,3 +30,6 @@ Rename `.env-template` to `.env` and set the variable values
 | `queries.query`    | The actual search string for the query                         |
 | `queries.channel`  | The channel ID where new posts from the query should be posted |
 | `queries.interval` | The interval in minutes in which the query should be executed  |
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Flazaroblanc%2Fpr0-querybot.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Flazaroblanc%2Fpr0-querybot?ref=badge_large)
