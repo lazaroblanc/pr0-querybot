@@ -1,5 +1,5 @@
 {
-  "name": "lordbot",
+  "name": "pr0-querybot",
   "version": "1.0.0",
   "main": "./src/index.js",
   "author": "Lázaro Blanc <lazaroblanc@users.noreply.github.com>",
