@@ -9,7 +9,7 @@ class BotConfiguration {
 
         logger.debug('Called constructor() on BotConfiguration');
 
-        let configFileName = 'config.yaml';
+        let configFileName = 'config.yml';
         let rootDir = path.resolve(__dirname, '..');
         let configFilePath = path.join(rootDir, configFileName);
 
