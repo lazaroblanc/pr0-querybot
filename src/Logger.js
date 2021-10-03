@@ -4,9 +4,9 @@ class Logger {
         this.doDebug = process.env.DEBUG == 'true' ? true : false;
         this.doVerbose = process.env.VERBOSE == 'true' ? true : false;
 
+        this.debug('Called constructor() on Logger');
         this.debug('Debug messages are enabled');
         this.verbose('Verbose messages are enabled');
-        this.debug('Called constructor() on Logger');
     }
 
     logMessage(level, message) {
