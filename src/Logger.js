@@ -4,37 +4,36 @@ class Logger {
         this.doDebug = process.env.DEBUG == 'true' ? true : false;
         this.doVerbose = process.env.VERBOSE == 'true' ? true : false;
 
-        this.debug('Debug output is enabled');
-        this.verbose('Verbose output is enabled');
+        this.debug('Debug messages are enabled');
+        this.verbose('Verbose messages are enabled');
         this.debug('Called constructor() on Logger');
     }
 
     logMessage(level, message) {
 
-        let logLevel = '';
+        let logLevelColor = '';
         switch (level) {
             case 'warn':
-                logLevel = `\x1b[33m[${level.toUpperCase()}]`;
+                logLevelColor = '\x1b[33m'; // Yellow
                 break;
 
             case 'error':
-                logLevel = `\x1b[31m[${level.toUpperCase()}]`;
+                logLevelColor = '\x1b[31m'; // Red
                 break;
 
             case 'done':
-                logLevel = `\x1b[32m[${level.toUpperCase()}]`;
+                logLevelColor = '\x1b[32m'; // Green
                 break;
 
             case 'debug':
-                logLevel = `\x1b[35m[${level.toUpperCase()}]`;
+                logLevelColor = '\x1b[35m'; // Magenta
                 break;
 
             default:
-                logLevel = `[${level.toUpperCase()}]`;
                 break;
         }
 
-        console.log(`${logLevel} ${this.getDate()} ${message}\x1b[0m`);
+        console.log(`${this.getDate()} ${logLevelColor}(${level.toUpperCase()}) ${message}\x1b[0m`);
     }
 
     error(message) {
@@ -65,15 +64,16 @@ class Logger {
 
     getDate() {
         const date = new Date();
-        let hourData = date.getHours();
-        let minData = date.getMinutes();
-        let secData = date.getSeconds();
 
-        let hour = (hourData < 10 ? '0' : '') + hourData;
-        let min = (minData < 10 ? '0' : '') + minData;
-        let sec = (secData < 10 ? '0' : '') + secData;
+        let year = date.getFullYear().toString().padStart(2, '0');
+        let month = date.getMonth().toString().padStart(2, '0');
+        let day = date.getDate().toString().padStart(2, '0');
+        let hour = date.getHours().toString().padStart(2, '0');
+        let min = date.getMinutes().toString().padStart(2, '0');
+        let sec = date.getSeconds().toString().padStart(2, '0');
+        let ms = date.getMilliseconds().toString().padStart(2, '0');
 
-        return '[' + hour + ':' + min + ':' + sec + ']';
+        return `${year}-${month}-${day} ${hour}:${min}:${sec}.${ms}`;
     }
 
 }
