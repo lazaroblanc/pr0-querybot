@@ -6,7 +6,8 @@
   "license": "",
   "private": true,
   "scripts": {
-    "start": "nodemon ."
+    "dev": "nodemon .",
+    "start": "node ."
   },
   "dependencies": {
     "axios": "^0.21.4",
