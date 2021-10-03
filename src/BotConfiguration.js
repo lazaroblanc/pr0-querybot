@@ -7,7 +7,7 @@ class BotConfiguration {
 
     constructor() {
 
-        logger.debug('Called constructor() on ConfigHandler');
+        logger.debug('Called constructor() on BotConfiguration');
 
         this._configFileName = 'config.yaml';
         this.config = {
