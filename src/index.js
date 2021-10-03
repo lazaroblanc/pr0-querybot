@@ -1,11 +1,7 @@
-const fs = require('fs');
-const pjson = JSON.parse(fs.readFileSync('package.json', 'utf-8'));
-console.log(`pr0-querybot v${pjson.version}\n`);
-require('dotenv').config();
-const onExit = require('signal-exit');
 const logger = require('./Logger');
 const client = require('./Client');
-const config = require('./BotConfiguration');
+const onExit = require('signal-exit');
+require('dotenv').config();
 
 client.login(process.env.BOT_TOKEN);
 
