@@ -13,8 +13,8 @@ Rename `.env-template` to `.env` and set the variable values
 | Variable  | Description                                                      |
 | --------- | ---------------------------------------------------------------- |
 | `BOT_TOKEN` | Discord bot user token                                           |
-| `USERNAME`  | pr0gramm.com username                                            |
-| `PASSWORD`  | pr0gramm.com password                                            |
+| `PR0GRAMM_USERNAME`  | pr0gramm.com username                                            |
+| `PR0GRAMM_PASSWORD`  | pr0gramm.com password                                            |
 | `DEBUG`     | Set to `true` to enable debug log output (defaults to `false`)   |
 | `VERBOSE`   | Set to `true` to enable verbose log output (defaults to `false`) |
 
