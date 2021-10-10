@@ -5,7 +5,7 @@ const path = require('path');
 logger.debug(`Called ${path.basename(__filename)}`);
 
 let client = new Discord.Client({
-    intents: [Discord.Intents.FLAGS.GUILDS],
+    intents: [],
     presence: {
         status: 'online'
     }
